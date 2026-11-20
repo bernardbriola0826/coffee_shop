@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: den
+  namespace: collectors-den
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt   # requires cert-manager
+spec:
+  ingressClassName: nginx
+  tls: [{hosts: [cafe.yourdomain.com], secretName: den-tls}]
+  rules:
+    - host: cafe.yourdomain.com
+      http: {paths: [{path: /, pathType: Prefix, backend: {service: {name: den, port: {number: 80}}}}]}

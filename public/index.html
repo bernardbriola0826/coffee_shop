@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Collectors Den Cafe — Order online</title><link rel="stylesheet" href="style.css"></head><body>
+<header class="top"><div><h1>Collectors Den Cafe</h1><p>Order ahead. Pick up when it's ready.</p></div><a href="#track" style="color:#f1ece4">Track an order</a></header>
+<main class="layout"><section id="menu" aria-live="polite"><p>Loading menu…</p></section>
+<aside class="panel" aria-label="Your order"><h2>Your order</h2><div id="cart"><p>Add something from the menu.</p></div>
+<div class="stack" id="co" hidden><input id="name" placeholder="Your name" maxlength="60" autocomplete="name"><input id="phone" placeholder="Mobile number (optional)" inputmode="tel" autocomplete="tel">
+<select id="type"><option value="pickup">Pickup</option><option value="dine-in">Dine in</option><option value="takeout">Takeout</option></select>
+<select id="pay"><option value="cash">Pay at the counter</option><option value="gcash">GCash at the counter</option><option value="card">Card at the counter</option></select>
+<button id="place">Place order</button></div><p class="err" id="err" role="alert"></p>
+<hr><h3 id="track">Track your order</h3><div class="stack"><input id="tcode" placeholder="Order code, e.g. CD-1234-ab12"><button class="alt" id="tbtn">Check status</button><p id="tout"></p></div></aside></main>
+<script src="common.js"></script><script src="shop.js"></script></body></html>
